@@ -63,7 +63,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+In the project directory,
+
+1. Install gh-pages package as "dev-dependency": `npm install gh-pages --save-dev`
+2. Add "homepage" property and deploy scripts to package.json
+![image](https://user-images.githubusercontent.com/71057935/117559958-3a192a00-b0bc-11eb-90d9-fed71549a03d.png)
+4. Create remote GitHub repo: `git remote add origin https://github.com/huiyuank/react-project-cart.git`
+5. Deploy to Github pages (this step creates the gh-pages branch): `npm run deploy`
+
+The app has been deployed onto GitHub pages on the following link:
+https://huiyuank.github.io/react-project-cart/
 
 ### `npm run build` fails to minify
 
