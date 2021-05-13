@@ -30,7 +30,9 @@ Refer to the React [documentation](https://reactjs.org/docs/create-a-new-react-a
 
 In `index.html`, there is a container div with id "root". The container is meant to be the parent element to hold all corresponding React components.
 
-In `index.js`, using ReactDOM method `render`, pass in two arguemnts: first the React component to be rendered, and second the location where you want to render it. Here we reference the container with id "root".
+In `index.js`, using ReactDOM `render()` method, pass in two arguments:
+1. the React component to be rendered, and 
+2. the location where you want to render it. Here we reference the container with id "root".
 
 ![image](https://user-images.githubusercontent.com/71057935/118088212-4e7d5f80-b3f9-11eb-9e90-a7f72e70ba4f.png)
 
