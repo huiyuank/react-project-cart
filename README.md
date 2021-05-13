@@ -1,6 +1,72 @@
-# Getting Started with Create React App
+# React JS Tutorial
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## About React JS
+
+React is a JavaScript library for building user interfaces efficiently. It was developed by Facebook in 2011 and is a dominant library for building interfaces, hence, it would be crucial to be familiar with this especially as a front-end software developer. 
+
+React is built in components, and components are arranged in a tree architecture. Each component is a piece of UI and they are put together to build complex UIs.
+
+### Components
+
+A component is commonly implemented as a JavaScript class. It holds a state property and a render that will output a ReactElement. A ReactElement maps to a DOM element as a lightweight representation as a JavaScript object. Babel compiles the JSX code into browser-compatible version of JavaScript.
+
+### Setting up Development Environment
+
+1. Node.js (Node >= 10.16 and npm >= 5.6 at time of writing)
+2. Visual Studio Code (VS Code)
+3. (optional) VS Code extension: Simple React Snippets
+
+![image](https://user-images.githubusercontent.com/71057935/118087051-8683a300-b3f7-11eb-8274-fa33717286fa.png)
+
+4. (optional) VS Code extension: Prettier - Code formatter
+
+![image](https://user-images.githubusercontent.com/71057935/118087112-a1eeae00-b3f7-11eb-8521-f5dc0111223c.png)
+
+Refer to the React [documentation](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) for more information.
+
+## Application Code
+
+In `index.html`, there is a container div with id "root". The container is meant to be the parent element to hold all corresponding React components.
+
+In `index.js`, using ReactDOM method `render`, pass in two arguemnts: first the React component to be rendered, and second the location where you want to render it. Here we reference the container with id "root".
+
+![image](https://user-images.githubusercontent.com/71057935/118088212-4e7d5f80-b3f9-11eb-9e90-a7f72e70ba4f.png)
+
+Create a `components` folder to keep all the component files.
+
+![image](https://user-images.githubusercontent.com/71057935/118092415-ab2f4900-b3fe-11eb-860e-9cff5fceec0d.png)
+
+The above image shows the tree of components that we have in this application. In order to keep a single source of truth, we keep the state property at the parent element of all children element, so that those elements can retrieve it as props. Essentially, we have lifted the state up.
+
+### Rendering Lists
+
+Whenever rendering elements from an array or iterable, each child should have a unique ["key"](https://reactjs.org/docs/lists-and-keys.html) property. Using the `map()` function to build the JSX expression, the "key" property helps React identify which items have changed, are added or are removed. Hence it is important they have a stable identity.
+
+Example in Counters component:
+
+![image](https://user-images.githubusercontent.com/71057935/118090062-a321da00-b3fb-11eb-8dbe-2c57eef7d6ff.png)
+
+With destructuring, we picked out `counters` from this.props, which is an array of objects.
+
+In `return`, we map each object in the array to a Counter component that makes use of the `counters` object's id as a unique key.
+
+### Binding Event Handlers
+
+The new ES6 feature of arrow functions allows us to bind event handlers without having to use the constructor method and binding every event handler manually.
+
+Example in App component:
+
+![image](https://user-images.githubusercontent.com/71057935/118091603-98684480-b3fd-11eb-8a52-9d292c9a4070.png)
+
+### Passing Event Arguments
+
+Example in Counter component:
+
+Arguments can be passed into events using higher-order function. Simply pass an arrow function with the event handler in the body of the function.
+
+![image](https://user-images.githubusercontent.com/71057935/118091851-e9783880-b3fd-11eb-95f3-7b6cfcfb41a1.png)
 
 ## Available Scripts
 
@@ -29,39 +95,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
+## Deployment
 
 In the project directory,
 
@@ -74,6 +108,3 @@ In the project directory,
 The app has been deployed onto GitHub pages on the following link:
 https://huiyuank.github.io/react-project-cart/
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
