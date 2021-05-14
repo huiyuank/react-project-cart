@@ -13,6 +13,17 @@ const NavBar = ({ totalNum }) => {
             {totalNum}
           </span>
         </a>
+        <a
+          className="navbar-brand"
+          href="https://github.com/huiyuank/react-project-cart"
+        >
+          <i
+            id="githubIcon"
+            className="bi-github text-secondary"
+            role="img"
+            aria-label="GitHub"
+          ></i>
+        </a>
       </div>
     </nav>
   );

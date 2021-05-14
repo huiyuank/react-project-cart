@@ -50,19 +50,7 @@ class Counter extends Component {
             onClick={() => this.props.onIncrement(this.props.counter)}
             className="btn btn-secondary btn-success p-1 mx-2 my-1"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-chevron-up"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"
-              />
-            </svg>
+            <i class="bi-chevron-up" role="img" aria-label="Increment"></i>
           </button>
 
           {/* Item count here */}
@@ -75,19 +63,7 @@ class Counter extends Component {
             onClick={() => this.props.onDecrement(this.props.counter)}
             className="btn btn-secondary btn-danger p-1 mx-2 my-1"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-chevron-down"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-              />
-            </svg>
+            <i class="bi-chevron-down" role="img" aria-label="Decrement"></i>
           </button>
         </section>
 
@@ -96,7 +72,8 @@ class Counter extends Component {
           onClick={() => this.props.onDelete(this.props.counter.id)}
           className="btn btn-danger btn-sm mx-4 my-5"
         >
-          Delete
+          <i class="bi-trash-fill" role="img" aria-label="Delete"></i>
+          {/* Delete */}
         </button>
       </div>
     );
