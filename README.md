@@ -1,6 +1,12 @@
 # React JS Tutorial
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and styled using [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/).
+
+Refer to [deployment](#deployment) section below for live link of project.
+
+### Interface
+
+![image](https://user-images.githubusercontent.com/71057935/118252207-19493e00-b4db-11eb-8a2f-5cb25f810910.png)
 
 ## About React JS
 
@@ -95,9 +101,10 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ## Deployment
+
+The app has been deployed onto GitHub pages on the following link:
+https://huiyuank.github.io/react-project-cart/
 
 In the project directory,
 
@@ -106,7 +113,3 @@ In the project directory,
 ![image](https://user-images.githubusercontent.com/71057935/117559958-3a192a00-b0bc-11eb-90d9-fed71549a03d.png)
 4. Create remote GitHub repo: `git remote add origin https://github.com/huiyuank/react-project-cart.git`
 5. Deploy to Github pages (this step creates the gh-pages branch): `npm run deploy`
-
-The app has been deployed onto GitHub pages on the following link:
-https://huiyuank.github.io/react-project-cart/
-
