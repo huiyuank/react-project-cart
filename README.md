@@ -6,7 +6,7 @@ Refer to [deployment](#deployment) section below for live link of project.
 
 ### Interface
 
-![image](https://user-images.githubusercontent.com/71057935/118252207-19493e00-b4db-11eb-8a2f-5cb25f810910.png)
+![image](https://user-images.githubusercontent.com/71057935/118261003-94afed00-b4e5-11eb-81cc-842c7ccd0416.png)
 
 ## About React JS
 
