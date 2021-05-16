@@ -50,7 +50,7 @@ class Counter extends Component {
             onClick={() => this.props.onIncrement(this.props.counter)}
             className="btn btn-secondary btn-success p-1 mx-2 my-1"
           >
-            <i class="bi-chevron-up" role="img" aria-label="Increment"></i>
+            <i className="bi-chevron-up" role="img" aria-label="Increment"></i>
           </button>
 
           {/* Item count here */}
@@ -63,7 +63,11 @@ class Counter extends Component {
             onClick={() => this.props.onDecrement(this.props.counter)}
             className="btn btn-secondary btn-danger p-1 mx-2 my-1"
           >
-            <i class="bi-chevron-down" role="img" aria-label="Decrement"></i>
+            <i
+              className="bi-chevron-down"
+              role="img"
+              aria-label="Decrement"
+            ></i>
           </button>
         </section>
 
@@ -72,7 +76,7 @@ class Counter extends Component {
           onClick={() => this.props.onDelete(this.props.counter.id)}
           className="btn btn-danger btn-sm mx-4 my-5"
         >
-          <i class="bi-trash-fill" role="img" aria-label="Delete"></i>
+          <i className="bi-trash-fill" role="img" aria-label="Delete"></i>
           {/* Delete */}
         </button>
       </div>
