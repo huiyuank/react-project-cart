@@ -2,7 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and styled using [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/).
 
-Refer to [deployment](#deployment) section below for live link of project.
+Statically hosted on Github at this [page](https://huiyuank.github.io/react-project-cart/).
+Refer to [deployment](#deployment) section below for more information.
 
 ### Interface
 
