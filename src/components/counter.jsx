@@ -43,25 +43,24 @@ class Counter extends Component {
   render() {
     console.log("Counter - Rendered");
     return (
-      <div>
-        <section className="btn-group-vertical btn-group-sm">
-          {/* Increment button here */}
-          <button
-            onClick={() => this.props.onIncrement(this.props.counter)}
-            className="btn btn-secondary btn-success p-1 mx-2 my-1"
-          >
-            <i className="bi-chevron-up" role="img" aria-label="Increment"></i>
-          </button>
-
-          {/* Item count here */}
-          <button className={this.getBadgeClasses()} disabled>
-            {this.formatCount()}
-          </button>
-
+      <div className="input-group ms-2 mb-3">
+        {/* Name here */}
+        <label
+          for="value"
+          className="col-2 col-xl-1 col-form-label fs-5 fw-light"
+        >
+          {this.props.counter.name}
+        </label>
+        <div
+          id="value"
+          className="btn-group btn-group-sm"
+          role="group"
+          aria-label="Quantity group"
+        >
           {/* Decrement button here */}
           <button
             onClick={() => this.props.onDecrement(this.props.counter)}
-            className="btn btn-secondary btn-danger p-1 mx-2 my-1"
+            className="btn btn-danger p-2"
           >
             <i
               className="bi-chevron-down"
@@ -69,22 +68,40 @@ class Counter extends Component {
               aria-label="Decrement"
             ></i>
           </button>
-        </section>
 
-        <button
-          // ***IMPORTANT! Use inline function in order to pass arguments into the method
-          onClick={() => this.props.onDelete(this.props.counter.id)}
-          className="btn btn-danger btn-sm mx-4 my-5"
+          {/* Item count here */}
+          <button className={this.getBadgeClasses()} disabled>
+            {this.formatCount()}
+          </button>
+
+          {/* Increment button here */}
+          <button
+            onClick={() => this.props.onIncrement(this.props.counter)}
+            className="btn btn-success p-2 "
+          >
+            <i className="bi-chevron-up" role="img" aria-label="Increment"></i>
+          </button>
+        </div>
+        <div
+          className="btn-group btn-group-sm"
+          role="group"
+          aria-label="Delete button"
         >
-          <i className="bi-trash-fill" role="img" aria-label="Delete"></i>
           {/* Delete */}
-        </button>
+          <button
+            // ***IMPORTANT! Use inline function in order to pass arguments into the method
+            onClick={() => this.props.onDelete(this.props.counter.id)}
+            className="btn btn-danger py-2 mx-3 mx-xl-4"
+          >
+            <i className="bi-trash-fill" role="img" aria-label="Delete"></i>
+          </button>
+        </div>
       </div>
     );
   }
 
   getBadgeClasses() {
-    let classes = "btn custom-button mx-2 p-2 btn-";
+    let classes = "btn custom-button p-2 btn-";
     classes += this.props.counter.value === 0 ? "warning" : "dark";
     return classes;
   }
