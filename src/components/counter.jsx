@@ -43,11 +43,11 @@ class Counter extends Component {
   render() {
     console.log("Counter - Rendered");
     return (
-      <div className="input-group ms-2 mb-3">
+      <div className="input-group ms-2 mb-4">
         {/* Name here */}
         <label
           for="value"
-          className="col-2 col-xl-1 col-form-label fs-5 fw-light"
+          className="col-3 col-lg-1 col-form-label fs-5 fw-light"
         >
           {this.props.counter.name}
         </label>
@@ -60,7 +60,7 @@ class Counter extends Component {
           {/* Decrement button here */}
           <button
             onClick={() => this.props.onDecrement(this.props.counter)}
-            className="btn btn-danger p-2"
+            className="btn btn-danger"
           >
             <i
               className="bi-chevron-down"
@@ -77,7 +77,7 @@ class Counter extends Component {
           {/* Increment button here */}
           <button
             onClick={() => this.props.onIncrement(this.props.counter)}
-            className="btn btn-success p-2 "
+            className="btn btn-success"
           >
             <i className="bi-chevron-up" role="img" aria-label="Increment"></i>
           </button>
@@ -91,7 +91,7 @@ class Counter extends Component {
           <button
             // ***IMPORTANT! Use inline function in order to pass arguments into the method
             onClick={() => this.props.onDelete(this.props.counter.id)}
-            className="btn btn-danger py-2 mx-3 mx-xl-4"
+            className="btn btn-danger mx-3 mx-lg-4"
           >
             <i className="bi-trash-fill" role="img" aria-label="Delete"></i>
           </button>
@@ -101,7 +101,7 @@ class Counter extends Component {
   }
 
   getBadgeClasses() {
-    let classes = "btn custom-button p-2 btn-";
+    let classes = "btn custom-button btn-";
     classes += this.props.counter.value === 0 ? "warning" : "dark";
     return classes;
   }
