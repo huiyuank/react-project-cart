@@ -7,7 +7,22 @@ Refer to [deployment](#deployment) section below for more information.
 
 ### Interface
 
-![image](https://user-images.githubusercontent.com/71057935/118261003-94afed00-b4e5-11eb-81cc-842c7ccd0416.png)
+![image](https://user-images.githubusercontent.com/71057935/120912005-4a71f400-c6be-11eb-8b79-f1bcbb693ca2.png)
+
+#### Counter
+Reflects number of items in cart with some quantity
+
+#### Reset
+Resets cart to original state with full item list (normally resets all existing cart item quantities to 0)
+
+#### Increment
+Increment item quantity by 1
+
+#### Decrement
+Decrement item quantity by 1 (minimum zero)
+
+#### Delete
+Delete item from cart entirely
 
 ## About React JS
 
