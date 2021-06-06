@@ -7,10 +7,16 @@ import NavBar from "./components/navbar.jsx";
 class App extends Component {
   state = {
     counters: [
-      { id: 1, value: 4 },
-      { id: 2, value: 0 },
-      { id: 3, value: 0 },
-      { id: 4, value: 0 },
+      { id: 1, name: "Cupcakes", value: 4 },
+      { id: 2, name: "Cookies", value: 0 },
+      { id: 3, name: "Brownies", value: 0 },
+      { id: 4, name: "Tarts", value: 0 },
+    ],
+    original: [
+      { id: 1, name: "Cupcakes", value: 0 },
+      { id: 2, name: "Cookies", value: 0 },
+      { id: 3, name: "Brownies", value: 0 },
+      { id: 4, name: "Tarts", value: 0 },
     ],
   };
 
@@ -48,11 +54,11 @@ class App extends Component {
   };
 
   handleReset = () => {
-    const counters = this.state.counters.map((c) => {
-      c.value = 0;
-      return c;
-    });
-    this.setState({ counters });
+    // const counters = this.state.counters.map((c) => {
+    //   c.value = 0;
+    //   return c;
+    // });
+    this.setState({ counters: this.state.original });
   };
 
   render() {
