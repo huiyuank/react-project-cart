@@ -7,7 +7,7 @@ Refer to [deployment](#deployment) section below for more information.
 
 ### Interface
 
-![image](![image](https://user-images.githubusercontent.com/71057935/122043171-a0a50c80-ce0d-11eb-994e-715d9d2cca7a.png))
+![image](https://user-images.githubusercontent.com/71057935/122043401-e2ce4e00-ce0d-11eb-83ff-77dbec6a3135.png)
 
 #### Counter
 Reflects number of items in cart with some quantity
