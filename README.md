@@ -7,7 +7,7 @@ Refer to [deployment](#deployment) section below for more information.
 
 ### Interface
 
-![image](https://user-images.githubusercontent.com/71057935/120912005-4a71f400-c6be-11eb-8b79-f1bcbb693ca2.png)
+![image](![image](https://user-images.githubusercontent.com/71057935/122043171-a0a50c80-ce0d-11eb-994e-715d9d2cca7a.png))
 
 #### Counter
 Reflects number of items in cart with some quantity
@@ -91,6 +91,23 @@ Example in Counter component:
 Arguments can be passed into events using higher-order function. Simply pass an arrow function with the event handler in the body of the function.
 
 ![image](https://user-images.githubusercontent.com/71057935/118091851-e9783880-b3fd-11eb-95f3-7b6cfcfb41a1.png)
+
+## Routing
+
+With React Router, we can implement single page rendering that is very fast and gives a better user experience.
+
+Refer to React Router [documentation](https://reactrouter.com/core/guides/quick-start) for more information.
+
+There are three primary categories of components in React Router:
+- routers, like `<BrowserRouter>` and `<HashRouter>`
+- route matchers, like `<Route>` and `<Switch>`
+- and navigation, like `<Link>`, `<NavLink>`, and `<Redirect>`
+
+The router component acts as a wrapper for the application and should be rendered at the root of the element hierarchy.
+
+`<Route>` components define what components to render for which path, and are nested within the `<Switch>` components. When a `<Switch>` is rendered, it searches through its children `<Route>` elements to find one whose path matches the current URL. When it finds one, it renders that `<Route>` and ignores all others. This means that the routes that are more specific (typically longer) paths should be placed before less-specific ones.
+
+`<Link>` components create links in the application. Wherever a <Link> is rendered, an anchor `<a>` will be rendered in the HTML document.
 
 ## Available Scripts
 
