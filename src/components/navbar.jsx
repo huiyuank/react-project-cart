@@ -1,20 +1,45 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import { Link, NavLink, useRouteMatch } from "react-router-dom";
 
 // Stateless Functional Component
 
-const NavBar = ({ totalNum }) => {
+export default function NavBar({ totalNum }) {
+  const [routes] = useState([
+    {
+      link: "/",
+      name: "Home",
+    },
+    {
+      link: "/cart",
+      name: "Cart",
+    },
+    {
+      link: "/products",
+      name: "Products",
+    },
+  ]);
   console.log("NavBar - Rendered");
   return (
     <nav className="navbar navbar-light bg-light">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+      <div className="container-fluid justify-content-start">
+        <Link className="navbar-brand" to="/react-project-cart/cart">
           Counter{" "}
           <span className="badge badge-md rounded-pill bg-secondary">
             {totalNum}
           </span>
-        </a>
+        </Link>
+        {routes.map(({ link, name }, idx) => (
+          <NavLink
+            className="nav-link"
+            activeClassName="nav-active"
+            to={"/react-project-cart" + link}
+            key={idx}
+          >
+            {name}
+          </NavLink>
+        ))}
         <a
-          className="navbar-brand"
+          className="navbar-brand ms-auto"
           href="https://github.com/huiyuank/react-project-cart"
         >
           <i
@@ -27,9 +52,7 @@ const NavBar = ({ totalNum }) => {
       </div>
     </nav>
   );
-};
-
-export default NavBar;
+}
 
 // class NavBar extends Component {
 //   render() {

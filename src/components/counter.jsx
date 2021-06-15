@@ -46,7 +46,7 @@ class Counter extends Component {
       <div className="input-group ms-2 mb-4">
         {/* Name here */}
         <label
-          for="value"
+          htmlFor="value"
           className="col-3 col-lg-1 col-form-label fs-5 fw-light"
         >
           {this.props.counter.name}
