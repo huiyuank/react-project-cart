@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default function Products(props) {
   const { original } = props;
@@ -14,7 +15,12 @@ export default function Products(props) {
               alt={name}
             />
             <div className="card-body">
-              <h5 className="card-title">{name}</h5>
+              <Link
+                className="navbar-brand"
+                to={"/react-project-cart/products/" + name.toLowerCase()}
+              >
+                <h5 className="card-title">{name}</h5>
+              </Link>
             </div>
           </div>
         </div>

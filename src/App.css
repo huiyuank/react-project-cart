@@ -28,3 +28,18 @@
 #githubIcon:hover {
   color: black !important;
 }
+
+#home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 75vh;
+  align-items: center;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  min-height: 50vh;
+  align-items: center;
+}

@@ -6,7 +6,7 @@ export default function Product(props) {
   const { original: products } = props;
   const product = products.filter((ele) => ele.name.toLowerCase() === name)[0];
   return (
-    <div className="card">
+    <div className="card text-center">
       <img
         className="card-img-top img-fluid"
         height="300"

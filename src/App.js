@@ -45,6 +45,7 @@ class App extends Component {
         value: 0,
       },
     ],
+    loading: false,
   };
 
   constructor() {
@@ -85,7 +86,10 @@ class App extends Component {
     //   c.value = 0;
     //   return c;
     // });
-    this.setState({ counters: this.state.original });
+    this.setState({ loading: true });
+    setTimeout(() => {
+      this.setState({ counters: this.state.original, loading: false });
+    }, 800);
   };
 
   render() {
@@ -108,6 +112,7 @@ class App extends Component {
                 <Route path={`/react-project-cart/cart`}>
                   <Counters
                     counters={this.state.counters}
+                    loading={this.state.loading}
                     onDelete={this.handleDelete}
                     onReset={this.handleReset}
                     onIncrement={this.handleIncrement}
@@ -128,7 +133,7 @@ class App extends Component {
 
 const Home = () => {
   return (
-    <div className="min-vh-100 mt-4 text-center">
+    <div id="home-container" className="mt-4 text-center">
       <h1 className="display-3">React Bakery</h1>
       <h3 className="fw-light">
         A bakery that only sells cupcakes, cookies, brownies and tarts.
