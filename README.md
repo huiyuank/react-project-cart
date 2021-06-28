@@ -109,6 +109,14 @@ The router component acts as a wrapper for the application and should be rendere
 
 `<Link>` components create links in the application. Wherever a <Link> is rendered, an anchor `<a>` will be rendered in the HTML document.
 
+## Spinners
+
+Using [React Spinner](https://www.npmjs.com/package/react-spinners), we can easily create a spinner that will be rendered when a page is loading, typically when data is being retrieved from the server or API calls are being done. 
+  
+The loader accepts a `loading` prop as a boolean and renders `null` if `loading` is set to false. In this example, we have hard coded a `setTimeOut()` to mimic the behaviour under the reset handler function. When the reset button is clicked, we expect the cart to be reset with the original empty cart and set `loading` to false after the time interval. 
+
+![React-Spinner](https://user-images.githubusercontent.com/71057935/123602738-a813df00-d82b-11eb-8a07-530cdaea1ec2.gif)
+  
 ## Available Scripts
 
 In the project directory, you can run:
